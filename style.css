@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #17ac6e;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.header button {
+  margin-top: 1rem;
+  padding: 10px;
+  font-size: medium;
+  font-weight: 600;
+  background-color: greenyellow;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#heading {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 #f00, 
+  0 2px 0 #f00,
+   0 4px 0 #60f,
+    -2px -2px 15px #f06,
+    2px -2px 15px #f06, -2px 2px 15px #f06, 2px -2px 15px #f06;
+}
+
+#gameBoard {
+  width: 302px;
+  height: 302px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000000;
+  border: 1px solid #000000;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 2px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #17ac6e;
+  cursor: pointer;
+}
+
+.circle {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 20px solid blue;
+}
+
+.cross {
+  height: 90px;
+  width: 90px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.cross::before,
+.cross::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+}
+
+.cross::before {
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+}
+
+.cross::after {
+  top: 50%;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%;
+}
+
+#gameInfo {
+  margin: 20px 0;
+}
